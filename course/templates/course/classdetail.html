@@ -1,0 +1,30 @@
+{% extends 'nav.html' %}
+
+{% block subtitle %}-班级详情{% endblock %}
+
+{% block main %}
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+
+ <div class="panel-heading text-center"><h2>课程班级详情</h2></div>
+
+<h4>{{"教师"}}</h4>
+<li>{{ classtime.teacher.name}}
+<br>
+
+<h4>{{"上课时间"}}</h4>
+<li>{{ classtime.class_time}}
+<br>
+
+<h4>{{"课程邮箱"}}</h4>
+<li>{{ classtime.teacher_mailbox}}
+</br>
+
+<h4>{{"联系电话"}}</h4>
+<li>{{ classtime.teacher_tel}}<br>
+
+</div>
+
+{% endblock %}
+{% block ac2 %}active{% endblock %}
+

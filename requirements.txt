@@ -1,0 +1,3 @@
+django-bootstrap4
+requests
+django-ckeditor

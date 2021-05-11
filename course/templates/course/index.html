@@ -1,0 +1,21 @@
+{% extends 'nav.html' %}
+
+{% block subtitle %}-课程列表{% endblock %}
+
+{% block main %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading text-center"><h2>我的课程</h2></div>
+{% if latest_course_list %}
+    <ul>
+    {% for course in latest_course_list %}
+       <li><a href="{% url 'course:detail' course.id %}">{{ course.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No courses are available.</p>
+{% endif %}
+</div>
+{% endblock %}
+{% block ac2 %}active{% endblock %}
+

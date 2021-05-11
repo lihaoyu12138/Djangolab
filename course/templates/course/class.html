@@ -1,0 +1,20 @@
+{% extends 'nav.html' %}
+
+{% block subtitle %}-课程班级列表{% endblock %}
+
+{% block main %}
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading text-center"><h2>课程班级</h2></div>
+{% if latest_class_list %}
+    <ul>
+    {% for classtime in latest_class_list %}
+       <li><a href="{% url 'course:classdetail' classtime.id %}">{{ classtime.class_time }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No classes are available.</p>
+{% endif %}
+</div>
+{% endblock %}
+{% block ac2 %}active{% endblock %}

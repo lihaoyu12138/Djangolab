@@ -1,0 +1,42 @@
+{% extends 'nav.html' %}
+
+{% block subtitle %}-课程详情{% endblock %}
+
+{% block main %}
+
+ <div class="panel panel-default">
+  <!-- Default panel contents -->
+<h1>{{ course.name}}</h1>
+
+<br>
+<h4>{{"课程简介"}}</h4>
+<li>{{ course.introduction}}
+<br>
+
+<h4>{{"主管教师"}}</h4>
+<li>{{ course.Start_teacher.name}}
+<br>
+
+<h4>{{"上课时间"}}</h4>
+<li>{{ course.class_time}}
+<br>
+
+<h4>{{"课程邮箱"}}</h4>
+<li>{{ course.mailbox}}
+</br>
+
+<h4>{{"联系电话"}}</h4>
+<li>{{ course.tel}}<br>
+
+<h4>{{"学期起止日期"}}</h4>
+<li>{{"from "}}{{ course.date}}
+<li>{{"to   "}}{{ course.end}}<br>
+
+
+<td><a href="{% url 'course:class' course.id %}">课程班级</a></td>
+
+</div>
+
+{% endblock %}
+{% block ac2 %}active{% endblock %}
+
